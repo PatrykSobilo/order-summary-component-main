@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+    body {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      background-color: hsl(225, 100%, 94%);
+      background-image: url('/images/pattern-background-desktop.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .order-summary {
+      position: relative;
+
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 450px;
+      min-width: 325px;
+      border-radius: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .order-summary-header {
+      font-weight: 900;
+      font-size: 26px;
+      margin-top: 40px;
+    }
+
+    .description {
+      color: grey;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      width: 75%;
+      margin-bottom: 25px;
+    }
+
+    .annual-plan-container {
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 2fr;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      margin-bottom: 40px;
+      padding: 25px;
+    }
+
+    .annual-plan-text {
+      font-weight: 700;
+    }
+
+    .annual-plan-change {
+      grid-row: span 2;
+      text-align: right;
+    }
+
+    .annual-plan-price {
+      order: 1;
+      color: grey;
+    }
+
+    .button {
+      padding: 15px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .proceed-to-payment {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 15px 20px  hsla(245, 75%, 52%, 0.250) ;
+    }
+
+    .cancel-order {
+      color: grey;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 375px) {
+    body {
+        font-size: 14px;
+    }
+
+    .description {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .order-summary {
+      min-width: 325px;
+    }
+
+     .annual-plan-container {
+      padding-top: 15px;
+        padding-bottom: 15px;   
+      grid-template-columns: 30% 40% 30%;           
+     }
+
+    .cancel-order {
+      padding-top: 0;  
+      margin-top: 0;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <div class="order-summary">
+    <div class="music-listener">
+      <img src="./images/illustration-hero.svg" alt="music-listener"
+        style="border-top-left-radius: 10px; border-top-right-radius: 10px; width: 100%; object-fit: cover;">
+    </div>
+
+    <div class="content order-summary-header">Order Summary</div>
+
+    <div class="content description">You can now listen to milions of songs, audiobooks and podcasts on any device
+      anywhere
+      you like!</div>
+
+    <div class="content annual-plan-container">
+      <img src="./images/icon-music.svg" alt="voice-symbol" style="align-content: center; grid-row: span 2;">
+      <div class="annual-plan-text">Annual Plan</div>
+      <div class="annual-plan-price">$59.99/year</div>
+      <div class="annual-plan-change">
+       <a href="https://github.com/new">Change</a>
+      </div>
+    </div>
+
+    <div class="content button proceed-to-payment">Proceed to Payment</div>
+
+    <div class="content button cancel-order">Cancel Order</div>
+
+  </div>
+</body>
+
+</html>
